@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Daftar Barang Masuk')
+{{-- Favicon - Logo web disamping title --}}
+<link rel="icon" href="{{ asset('img/logo_arch_web.png') }}" type="image/png">
 
 @push('style')
     <link rel="stylesheet" href="{{ asset('library/select2/dist/css/select2.min.css') }}">
