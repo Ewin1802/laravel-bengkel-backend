@@ -53,7 +53,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Jumlah Barang</label>
+                                <label>Jumlah Produk (sesuai nota)</label>
                                 <input type="number" name="quantity" class="form-control @error('quantity') is-invalid @enderror"
                                        value="{{ old('quantity', $productIn->quantity) }}" min="1">
                                 @error('quantity')
@@ -62,7 +62,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Harga Total (Rp) *Cek di Nota</label>
+                                <label>Harga Total (Rp) dari Produk ini (sesuai nota)</label>
                                 <input type="text" id="amount_display"
                                        class="form-control @error('amount') is-invalid @enderror"
                                        value="{{ number_format($productIn->amount, 0, ',', '.') }}"
@@ -109,7 +109,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Gambar Bukti (Opsional)</label>
+                                <label>Bukti Transaksi (Gambar Nota)</label>
                                 @if ($productIn->image)
                                     <img src="{{ asset($productIn->image) }}" class="img-thumbnail mb-2" width="100">
                                 @endif

@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Jumlah Barang</label>
+                                <label>Jumlah Produk (sesuai nota)</label>
                                 <input type="number" id="quantity" name="quantity" class="form-control @error('quantity') is-invalid @enderror"
                                        value="{{ old('quantity', 1) }}" min="1" oninput="calculateUnitPrice()">
                                 @error('quantity')
@@ -59,7 +59,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Harga Total (Rp) *Cek di Nota</label>
+                                <label>Harga Total (Rp) dari Produk ini (sesuai nota)</label>
                                 <input type="text" id="amount_display" class="form-control @error('amount') is-invalid @enderror"
                                        placeholder="Masukkan Harga Total" oninput="formatPrice(this); calculateUnitPrice()">
                                 <input type="hidden" id="amount_input" name="amount">
@@ -107,7 +107,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Upload Bukti Transaksi (Opsional)</label>
+                                <label>Upload Bukti Transaksi (Gambar Nota)</label>
                                 <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" accept="image/*">
                                 @error('image')
                                     <div class="invalid-feedback">{{ $message }}</div>
