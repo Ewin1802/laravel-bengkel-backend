@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Produk Terlaris')
+@section('title', 'Laporan Produk')
 
 {{-- Favicon --}}
 <link rel="icon" href="{{ asset('img/logo_arch_web.png') }}" type="image/png">
@@ -14,11 +14,11 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Daftar Produk Terlaris</h1>
+                <h1>Laporan Produk</h1>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
                     <div class="breadcrumb-item"><a href="#">Laporan</a></div>
-                    <div class="breadcrumb-item">Daftar Produk Terlaris</div>
+                    <div class="breadcrumb-item">Laporan Produk</div>
                 </div>
             </div>
 

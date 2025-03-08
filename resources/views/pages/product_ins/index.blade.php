@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Daftar Barang Masuk')
+@section('title', 'Produk Masuk')
 {{-- Favicon - Logo web disamping title --}}
 <link rel="icon" href="{{ asset('img/logo_arch_web.png') }}" type="image/png">
 
@@ -12,7 +12,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Daftar Barang Masuk</h1>
+                <h1>Produk Masuk</h1>
                 <div class="section-header-button">
                     <a href="{{ route('product_ins.create') }}" class="btn btn-primary">Tambah Barang Masuk</a>
                 </div>
