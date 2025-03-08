@@ -56,7 +56,7 @@
                 <ul class="dropdown-menu">
                     <li class="nav-item {{ Request::is('orde*') ? 'active' : '' }}">
                         <a href="{{ route('order_reports.index') }}" class="nav-link">
-                            <i class="fas fa-receipt"></i> <span>Laporan Order</span>
+                            <i class="fas fa-receipt"></i> <span>Laporan Penjualan</span>
                         </a>
                     </li>
                     <li class="nav-item {{ Request::is('top*') ? 'active' : '' }}">

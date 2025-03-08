@@ -77,7 +77,7 @@
                                     <div class="col-md-6">
                                         <ul class="list-group">
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                Total Payment Amount (Jumlah Pembayaran Konsumen)
+                                                Total Payment Amount (Jumlah Bayar dari Customer)
                                                 <span>{{ number_format($summary['total_revenue'], 2) }}</span>
                                             </li>
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
