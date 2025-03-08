@@ -174,10 +174,10 @@
                         "<span style='color: orange; font-size: 18px; text-align: center; display: block;'>😵 Usahamu Jalan di tempat, Hidop mar Mati!</span>";
                 } else if (totalKeuangan < totalPersediaan) {
                     financialMessage.innerHTML =
-                        "<span style='color: red; font-size: 18px; text-align: center; display: block;'>⚠️ Usahamu tidak normal, mungkin kamu terlalu makang puji dalam belanja bahan persediaan!</span>";
+                        "<span style='color: red; font-size: 18px; text-align: center; display: block;'>⚠️ Usahamu tidak normal, Belanjamu terlalu banyak namun Toko kebanyakan tutup/tidak jualan!</span>";
                 } else if (totalKeuangan > totalPersediaan) {
                     financialMessage.innerHTML =
-                        "<span style='color: green; font-size: 18px; text-align: center; display: block;'>🎉 Kamu terbaik, Kamu layak buka cabang di Turki!</span>";
+                        "<span style='color: green; font-size: 18px; text-align: center; display: block;'>🎉 Fulus maso bagus, Kamu layak buka cabang di Turki!</span>";
                 }
             }
         };
