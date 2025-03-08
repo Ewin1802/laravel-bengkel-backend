@@ -68,7 +68,7 @@
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Perbandingan Total Persediaan & Pendapatan</h4>
+                                <h4>Perbandingan Total Belanja & Pendapatan</h4>
                             </div>
                             <div class="card-body d-flex flex-column align-items-center">
                                 <div style="width: 300px; height: 300px;">
@@ -99,7 +99,7 @@
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td>Jumlah Persediaan</td>
+                                                <td>Jumlah Belanja</td>
                                                 <td>Rp {{ number_format($totalPersediaan, 0, ',', '.') }}</td>
                                             </tr>
                                             <tr>
@@ -109,7 +109,7 @@
                                             </tr>
                                             <tr>
                                                 <td>3</td>
-                                                <td>Total (Pendapatan - Persediaan)</td>
+                                                <td>Total (Pendapatan - Belanja)</td>
                                                 <td id="differenceAmount"></td>
                                             </tr>
                                         </tbody>
