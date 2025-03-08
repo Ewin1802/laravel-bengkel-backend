@@ -59,7 +59,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Harga Total (Rp) dari Produk ini (sesuai nota)</label>
+                                <label>Harga Total (Rp) dari Produk ini (lihat nota)</label>
                                 <input type="text" id="amount_display" class="form-control @error('amount') is-invalid @enderror"
                                        placeholder="Masukkan Harga Total" oninput="formatPrice(this); calculateUnitPrice()">
                                 <input type="hidden" id="amount_input" name="amount">
@@ -69,7 +69,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Harga Per Satuan Barang (Rp)</label>
+                                <label>Harga Per Satuan Barang (Harga Total Barang / Jumlah Produk) Otomatis terisi</label>
                                 <input type="text" id="unit_price" class="form-control" readonly>
                             </div>
 

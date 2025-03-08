@@ -62,7 +62,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Harga Total (Rp) dari Produk ini (sesuai nota)</label>
+                                <label>Harga Total (Rp) dari Produk ini (lihat nota)</label>
                                 <input type="text" id="amount_display"
                                        class="form-control @error('amount') is-invalid @enderror"
                                        value="{{ number_format($productIn->amount, 0, ',', '.') }}"
