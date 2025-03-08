@@ -127,7 +127,7 @@
                                             <th>Pajak</th>
                                             <th>Subtotal</th>
                                             <th>Tanggal</th>
-                                            <th>Jam Kedatangan</th>
+                                            <th>Jam Transaksi</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>

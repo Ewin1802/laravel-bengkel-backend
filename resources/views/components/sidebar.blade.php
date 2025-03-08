@@ -12,7 +12,7 @@
             <li class="nav-item dropdown {{ Request::is('users*', 'categories*', 'suppl*', 'discounts*', 'product_names*') ? 'active' : '' }}">
                 <a href="#" class="nav-link has-dropdown">
                     <i class="fas fa-file-alt"></i>  <!-- Ubah ikon ke file-alt -->
-                    <span>Input</span>
+                    <span>Data Umum</span>
                 </a>
                 <ul class="dropdown-menu">
                     <li class="{{ Request::is('users*') ? 'active' : '' }}">
@@ -36,7 +36,7 @@
             <li class="nav-item dropdown {{ Request::is('product_i*', 'products*') ? 'active' : '' }}">
                 <a href="#" class="nav-link has-dropdown">
                     <i class="fas fa-cogs"></i> <!-- Ubah ikon ke cogs -->
-                    <span>Proses</span>
+                    <span>Data Produk</span>
                 </a>
                 <ul class="dropdown-menu">
                     <li class="{{ Request::is('product_i*') ? 'active' : '' }}">
@@ -73,54 +73,6 @@
             </li>
 
 
-
-            {{-- <li class="nav-item dropdown {{ Request::is('bahan*','inventories*','inventory_out*',) ? 'active' : '' }}">
-
-                <a href="javascript:void(0);" class="nav-link has-dropdown">
-                    <i class="fas fa-tasks"></i>
-                    <span>Persediaan</span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li class="{{ Request::is('bahan*') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('bahans.index') }}">Nama Bahan</a>
-                    </li>
-                </ul>
-                <ul class="dropdown-menu">
-                    <li class="{{ Request::is('inventories*') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('inventories.index') }}">Persediaan Masuk</a>
-                    </li>
-                </ul>
-                <ul class="dropdown-menu">
-                    <li class="{{ Request::is('inventory_out*') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('inventory_out.index') }}">Persediaan Keluar</a>
-                    </li>
-                </ul>
-            </li> --}}
-
-
-            {{-- <li class="nav-item {{ Request::is('orde*') ? 'active' : '' }}">
-                <a href="{{ route('order_reports.index') }}" class="nav-link">
-                    <i class="fas fa-fire"></i><span>Laporan Order</span>
-                </a>
-            </li>
-            <li class="nav-item {{ Request::is('top*') ? 'active' : '' }}">
-                <a href="{{ route('top.products') }}" class="nav-link">
-                    <i class="fas fa-fire"></i><span>Laporan Produk</span>
-                </a>
-            </li>
-            <li class="nav-item {{ Request::is('inventory-reports*') ? 'active' : '' }}">
-                <a href="{{ route('inventory.reports') }}" class="nav-link">
-                    <i class="fas fa-fire"></i><span>Laporan Persediaan</span>
-                </a>
-            </li>
-
-
-
-            <li class="nav-item {{ Request::is('laporan-keuangan*') ? 'active' : '' }}">
-                <a href="{{ route('financial.report') }}" class="nav-link">
-                    <i class="fas fa-chart-line"></i> <span>Analisa Keuangan</span>
-                </a>
-            </li> --}}
 
 
 </div>
