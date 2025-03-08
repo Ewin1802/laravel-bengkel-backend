@@ -68,7 +68,7 @@
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Perbandingan Total Belanja & Pendapatan</h4>
+                                <h4>Perbandingan Total Belanja & Penjualan Produk</h4>
                             </div>
                             <div class="card-body d-flex flex-column align-items-center">
                                 <div style="width: 300px; height: 300px;">
@@ -104,12 +104,12 @@
                                             </tr>
                                             <tr>
                                                 <td>2</td>
-                                                <td>Jumlah Orderan</td>
+                                                <td>Jumlah Penjualan</td>
                                                 <td>Rp {{ number_format($totalKeuangan, 0, ',', '.') }}</td>
                                             </tr>
                                             <tr>
                                                 <td>3</td>
-                                                <td>Total (Pendapatan - Belanja)</td>
+                                                <td>Total (Penjualan - Belanja)</td>
                                                 <td id="differenceAmount"></td>
                                             </tr>
                                         </tbody>
@@ -174,7 +174,7 @@
                         "<span style='color: orange; font-size: 18px; text-align: center; display: block;'>😵 Usahamu Jalan di tempat, Hidop mar Mati!</span>";
                 } else if (totalKeuangan < totalPersediaan) {
                     financialMessage.innerHTML =
-                        "<span style='color: red; font-size: 18px; text-align: center; display: block;'>⚠️ Usahamu tidak normal, Belanjamu terlalu banyak, perlu improvisasi untuk menyesuaikan diri dengan kebutuhan pasar dan pelanggan!</span>";
+                        "<span style='color: red; font-size: 18px; text-align: center; display: block;'>⚠️ Belanjamu terlalu banyak, perlu improvisasi untuk menyesuaikan diri dengan kebutuhan pasar dan pelanggan!</span>";
                 } else if (totalKeuangan > totalPersediaan) {
                     financialMessage.innerHTML =
                         "<span style='color: green; font-size: 18px; text-align: center; display: block;'>🎉 Fulus maso bagus, Kamu layak buka cabang di Turki!</span>";
