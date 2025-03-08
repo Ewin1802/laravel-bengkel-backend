@@ -83,11 +83,13 @@
                                             </span>
                                         </td>
                                         <td>
-                                            <a href="{{ route('product_ins.edit', $productIn->id) }}" class="btn btn-info btn-sm">Edit</a>
-                                            <form action="{{ route('product_ins.destroy', $productIn->id) }}" method="POST" class="d-inline">
-                                                @csrf @method('DELETE')
-                                                <button class="btn btn-danger btn-sm">Hapus</button>
-                                            </form>
+                                            @if (!$productIn->is_received)
+                                                <a href="{{ route('product_ins.edit', $productIn->id) }}" class="btn btn-info btn-sm">Edit</a>
+                                                <form action="{{ route('product_ins.destroy', $productIn->id) }}" method="POST" class="d-inline">
+                                                    @csrf @method('DELETE')
+                                                    <button class="btn btn-danger btn-sm">Hapus</button>
+                                                </form>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach
