@@ -29,6 +29,7 @@ class CategorySeeder extends Seeder
             ['name' => 'Oli dan Pelumas'],
             ['name' => 'Aki dan Kelistrikan'],
             ['name' => 'Ban dan Velg'],
+            ['name' => 'Komponen Mesin'],
             ['name' => 'Aksesori'],
 
         ];

@@ -55,7 +55,7 @@
                                     <th>Kategori</th>
                                     <th>Nama Produk</th>
                                     <th>Unit</th>
-                                    <th>Harga</th>
+                                    <th>Harga Jual</th>
                                     <th>Stok</th>
                                     <th>Status</th>
                                     <th>Aksi</th>
