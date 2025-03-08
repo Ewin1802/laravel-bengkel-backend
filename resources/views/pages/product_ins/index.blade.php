@@ -22,8 +22,6 @@
                 <div class="card">
                     <div class="card-header">
                         <h4>Semua Barang Masuk</h4>
-
-
                     </div>
 
                     <div class="card-body">
@@ -67,7 +65,9 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>
                                             @if ($productIn->image)
-                                                <img src="{{ asset($productIn->image) }}" width="50" height="50">
+                                                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset($productIn->image) }}">
+                                                    <img src="{{ asset($productIn->image) }}" width="50" height="50" class="img-thumbnail">
+                                                </a>
                                             @else
                                                 <span>-</span>
                                             @endif
@@ -102,4 +102,34 @@
             </div>
         </section>
     </div>
+
+    <!-- Modal untuk menampilkan gambar penuh -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Gambar Barang</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
+
+@push('scripts')
+<script>
+    $(document).ready(function() {
+        $('#imageModal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget); // Gambar yang diklik
+            var imageSrc = button.data('image'); // Ambil URL gambar dari atribut data
+            var modalImage = $('#modalImage'); // Temukan elemen gambar di dalam modal
+            modalImage.attr('src', imageSrc); // Setel gambar di modal agar sesuai dengan gambar yang diklik
+        });
+    });
+</script>
+@endpush
