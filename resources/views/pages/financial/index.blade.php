@@ -147,7 +147,7 @@
                 new Chart(ctx, {
                     type: 'pie',
                     data: {
-                        labels: ['Total Persediaan', 'Total Pendapatan'],
+                        labels: ['Total Belanja', 'Total Pendapatan'],
                         datasets: [{
                             data: [totalPersediaan, totalKeuangan],
                             backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(13, 180, 185, 0.6)'],

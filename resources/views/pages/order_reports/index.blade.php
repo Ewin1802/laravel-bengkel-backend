@@ -97,7 +97,7 @@
                                                 <span>{{ number_format($summary['total_service_charge'], 2) }}</span>
                                             </li>
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                Total (Fulus Bersih)
+                                                Total (Uang Penjualan)
                                                 <span>{{ number_format($summary['total'], 2) }}</span>
                                             </li>
                                         </ul>
