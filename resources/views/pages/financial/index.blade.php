@@ -109,7 +109,7 @@
                                             </tr>
                                             <tr>
                                                 <td>3</td>
-                                                <td>Total (Penjualan - Belanja)</td>
+                                                <td>Pendapatan (Penjualan - Belanja)</td>
                                                 <td id="differenceAmount"></td>
                                             </tr>
                                         </tbody>
@@ -147,7 +147,7 @@
                 new Chart(ctx, {
                     type: 'pie',
                     data: {
-                        labels: ['Total Belanja', 'Total Pendapatan'],
+                        labels: ['Total Belanja', 'Total Penjualan'],
                         datasets: [{
                             data: [totalPersediaan, totalKeuangan],
                             backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(13, 180, 185, 0.6)'],
