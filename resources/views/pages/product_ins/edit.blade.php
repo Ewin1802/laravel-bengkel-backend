@@ -98,17 +98,6 @@
                                 @enderror
                             </div>
 
-                            {{-- <div class="form-group">
-                                <label>Status Penerimaan</label>
-                                <select name="is_received" class="form-control @error('is_received') is-invalid @enderror">
-                                    <option value="1" {{ $productIn->is_received == 1 ? 'selected' : '' }}>Sudah Diterima</option>
-                                    <option value="0" {{ $productIn->is_received == 0 ? 'selected' : '' }}>Belum Diterima</option>
-                                </select>
-                                @error('is_received')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div> --}}
-
                             <div class="form-group">
                                 <label>Keterangan</label>
                                 <textarea name="description"
@@ -132,6 +121,9 @@
                                 @enderror
                                 <img id="imagePreview" src="" class="mt-2" width="100" style="display: none;">
                             </div>
+
+                            <!-- Input hidden untuk menetapkan status "Belum Diterima" -->
+                            <input type="hidden" name="is_received" value="0">
 
                         </div>
                         <div class="card-footer text-right">
