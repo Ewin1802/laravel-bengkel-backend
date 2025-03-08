@@ -98,7 +98,7 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label>Status Penerimaan</label>
                                 <select name="is_received" class="form-control @error('is_received') is-invalid @enderror">
                                     <option value="1" {{ $productIn->is_received == 1 ? 'selected' : '' }}>Sudah Diterima</option>
@@ -107,7 +107,7 @@
                                 @error('is_received')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
-                            </div>
+                            </div> --}}
 
                             <div class="form-group">
                                 <label>Keterangan</label>
