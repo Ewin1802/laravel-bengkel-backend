@@ -19,9 +19,12 @@
             </div>
 
             <div class="section-body">
+                <p class="section-header">
+                    Info : Produk Masuk adalah Produk yang di beli dari Supplier atau dari Toko lain untuk dijual kembali. Data Produk Masuk adalah data riil dari Nota Pembelian. Semua Produk Masuk yang ada dalam tabel dibawah ini yang nanti akan muncul pada saat memilih data barang di halaman Produk Jual kecuali yang sudah berstatus "Sudah Di Etalase" tidak akan muncul pada saat memilih data barang karena Produk tersebut sudah siap untuk dijual pada Tablet Kasir.
+                </p>
                 <div class="card">
                     <div class="card-header">
-                        <h4>Semua Barang Masuk</h4>
+                        <h4>Semua Produk Masuk</h4>
                     </div>
 
                     <div class="card-body">

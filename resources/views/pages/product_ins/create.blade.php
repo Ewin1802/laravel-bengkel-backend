@@ -16,6 +16,9 @@
             </div>
 
             <div class="section-body">
+                <p class="section-header">
+                    Info : Ketika Nama Barang tidak ada silahkan klik "Tambah Barang" kemudian isi Nama Barang dan Satuan, tapi jika nama barang sudah ada maka silahkan klik saja nama barang tersebut tidak perlu untuk menambah lagi. Jumlah Produk silahkan lihat di Nota. Harga Total silahkan cek jumlah total belanja yang ada di Nota khusus untuk 1 produk yang akan diinput saat ini. Harga Satuan otomatis muncul jika harga total sudah diisi. Pilih Supplier dan Upload Nota sebagai bahan pendukung.
+                </p>
                 <div class="card">
                     <form action="{{ route('product_ins.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf

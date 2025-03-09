@@ -19,6 +19,12 @@
             </div>
 
             <div class="section-body">
+
+                {{-- <h2 class="section-title">Petunjuk</h2> --}}
+                <p class="section-header">
+                    Info : Daftar produk ini yang nanti akan muncul di Handphone Tablet Kasir. Harap memperhatikan gambar produk, harga jual, dan data lainnya pada saat menambah produk jual.
+                </p>
+
                 <div class="float-left">
                     <form method="GET" action="{{ route('products.index') }}">
                         <select class="form-control selectric" name="category_id" onchange="this.form.submit()">

@@ -13,7 +13,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Dashboard - MJM Parts Marisa</h1>
+                <h1>DASHBOARD - MANAJEMEN MJM PARTS MARISA</h1>
             </div>
             <div class="row">
 

@@ -16,6 +16,9 @@
             </div>
 
             <div class="section-body">
+                <p class="section-header">
+                    Info : Siapkan terlebih dahulu gambar produk (file JPG), perkiraan harga jual produk, serta data kategori produk pada saat menyimpan data produk jual. Barang Masuk bersumber dari Data Produk Masuk, ketika pilih barang isinya kosong berarti Anda belum menginput Produk Masuk.
+                </p>
                 <div class="card">
                     <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
