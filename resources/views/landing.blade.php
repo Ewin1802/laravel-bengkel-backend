@@ -104,11 +104,14 @@
         <div class="hero-text">
             <h1>HELLO,</h1>
             <h1>MJM PARTS !</h1>
-            <p>Semoga Penjualan hari ini meningkat. Aminnn</p>
+            <p>Teknologi informasi memainkan peran penting dalam meningkatkan efisiensi dan efektivitas proses penjualan produk.
+               Dengan sistem digital, pengelolaan stok, transaksi, dan layanan pelanggan menjadi lebih cepat dan akurat,
+               memastikan kepuasan pelanggan serta pertumbuhan bisnis yang lebih baik.</p>
             <a href="{{ route('login') }}" class="btn-custom">Login</a>
         </div>
         <img src="{{ asset('img/logo_arch_web.png') }}" alt="Digital Art">
     </section>
+
 
 </body>
 </html>
