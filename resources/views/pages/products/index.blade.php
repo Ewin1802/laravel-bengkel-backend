@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('title', 'Produk Jual')
-{{-- Favicon - Logo web di samping title --}}
-<link rel="icon" href="{{ asset('img/logo_arch_web.png') }}" type="image/png">
 
 @push('style')
     <link rel="stylesheet" href="{{ asset('library/select2/dist/css/select2.min.css') }}">
@@ -19,10 +17,8 @@
             </div>
 
             <div class="section-body">
-
-                {{-- <h2 class="section-title">Petunjuk</h2> --}}
                 <p class="section-header">
-                    Info : Daftar produk ini yang nanti akan muncul di Handphone Tablet Kasir. Harap memperhatikan gambar produk, harga jual, dan data lainnya pada saat menambah produk jual.
+                    Info: Daftar produk ini akan muncul di kasir. Harap periksa gambar, harga, dan data lainnya sebelum menambahkan produk.
                 </p>
 
                 <div class="float-left">
@@ -90,10 +86,11 @@
                                         </td>
                                         <td>
                                             <a href="{{ route('products.edit', $product->id) }}" class="btn btn-info btn-sm">Edit</a>
-                                            <form action="{{ route('products.destroy', $product->id) }}" method="POST" class="d-inline">
-                                                @csrf @method('DELETE')
-                                                <button class="btn btn-danger btn-sm">Hapus</button>
-                                            </form>
+
+                                            <!-- Tombol Hapus (memunculkan modal) -->
+                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#confirmDeleteModal" data-id="{{ $product->id }}">
+                                                Hapus
+                                            </button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -109,7 +106,7 @@
         </section>
     </div>
 
-    <!-- Modal untuk menampilkan gambar ukuran penuh -->
+    <!-- Modal untuk menampilkan gambar -->
     <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -125,16 +122,50 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Konfirmasi Hapus -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmDeleteModalLabel">Konfirmasi Hapus</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Apakah Anda yakin ingin menghapus produk ini? Data yang dihapus tidak dapat dikembalikan.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <form id="deleteForm" action="" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Ya, Hapus</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @push('scripts')
 <script>
     $(document).ready(function() {
+        // Modal gambar produk
         $('#imageModal').on('show.bs.modal', function(event) {
-            var button = $(event.relatedTarget); // Gambar yang diklik
-            var imageSrc = button.data('image'); // Ambil URL gambar dari atribut data
-            var modalImage = $('#modalImage'); // Temukan elemen gambar di dalam modal
-            modalImage.attr('src', imageSrc); // Setel gambar di modal agar sesuai dengan gambar yang diklik
+            var button = $(event.relatedTarget);
+            var imageSrc = button.data('image');
+            $('#modalImage').attr('src', imageSrc);
+        });
+
+        // Modal konfirmasi hapus
+        $('#confirmDeleteModal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget);
+            var productId = button.data('id');
+
+            var form = $('#deleteForm');
+            form.attr('action', '/products/' + productId);
         });
     });
 </script>
