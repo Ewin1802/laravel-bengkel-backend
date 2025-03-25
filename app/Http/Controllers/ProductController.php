@@ -242,16 +242,6 @@ class ProductController extends Controller
     }
 
     // DESTROY: Hapus produk
-    // public function destroy(Product $product)
-    // {
-    //     if ($product->image && Storage::exists($product->image)) {
-    //         Storage::delete($product->image);
-    //     }
-
-    //     $product->delete();
-
-    //     return redirect()->route('products.index')->with('success', 'Produk berhasil dihapus.');
-    // }
     public function destroy(Product $product)
     {
         // Hapus semua order_items yang terkait dengan produk ini
