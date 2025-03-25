@@ -24,8 +24,13 @@ use App\Http\Controllers\OrderItemController;
 */
 
 Route::get('/', function () {
-    return view('pages.auth.login');
+    // return view('pages.auth.login');
+    return view('landing');
 });
+Route::get('/login', function () {
+    return view('pages.auth.login');
+})->name('login');
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('home', function () {

@@ -68,7 +68,7 @@
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Perbandingan Total Belanja & Penjualan Produk</h4>
+                                <h4>Perbandingan Total Persediaan & Pendapatan</h4>
                             </div>
                             <div class="card-body d-flex flex-column align-items-center">
                                 <div style="width: 300px; height: 300px;">
